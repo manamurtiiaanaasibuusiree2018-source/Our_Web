@@ -188,7 +188,6 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -196,13 +195,20 @@ body {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    margin: 0 auto;
 }
 
 .logo-img {
+    display: block;
+    margin: 0 auto;
     height: 55px;
     width: auto;
     border-radius: 4px;
     object-fit: contain;
+}
+
+.nav-menu {
+    margin-left: auto;
 }
 
 .logo h1 {
@@ -1133,4 +1139,90 @@ body {
     .process-section h2 {
         font-size: 1.5rem;
     }
+}
+
+/* Logo Center Section */
+.logo-center-section {
+    overflow: hidden;
+    padding: 30px 0;
+    background: linear-gradient(135deg, var(--light-bg) 0%, #e8eef5 100%);
+    border-top: 3px solid var(--accent-color);
+    border-bottom: 3px solid var(--accent-color);
+}
+
+.logo-slide-track {
+    width: 100%;
+    overflow: hidden;
+}
+
+.logo-center-img {
+    width: 220px;
+    max-width: 280px;
+    min-width: 120px;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(30, 58, 95, 0.18);
+}
+
+.logo-sliding {
+    animation: slideLeftRight 25s ease-in-out infinite;
+}
+
+@keyframes slideLeftRight {
+    0%   { transform: translateX(0); }
+    50%  { transform: translateX(calc(100vw - 280px)); }
+    100% { transform: translateX(0); }
+}
+
+/* Tab System for Addeemsa Hojii */
+.wp-tabs {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 30px 0 20px;
+    flex-wrap: wrap;
+}
+
+.wp-tab-btn {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(30, 58, 95, 0.2);
+}
+
+.wp-tab-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(30, 58, 95, 0.35);
+}
+
+.wp-tab-btn.active {
+    background: linear-gradient(135deg, var(--accent-color), #e5c550);
+    color: var(--primary-color);
+    box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
+}
+
+.wp-tab-btn .wp-icon {
+    font-size: 1.3rem;
+    margin-right: 8px;
+}
+
+.wp-tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.wp-tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
