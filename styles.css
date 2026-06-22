@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --primary-color: #1e3a5f;
     --secondary-color: #2c5aa0;
@@ -20,6 +24,12 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--white);
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .container {
@@ -189,6 +199,8 @@ body {
     padding: 0 20px;
     display: flex;
     align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -212,7 +224,7 @@ body {
 }
 
 .logo h1 {
-    font-size: 1.8rem;
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
     font-weight: 700;
 }
 
@@ -220,6 +232,8 @@ body {
     display: flex;
     list-style: none;
     gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .nav-menu a {
@@ -238,17 +252,17 @@ body {
 .hero {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: var(--white);
-    padding: 100px 20px;
+    padding: clamp(64px, 10vw, 100px) 20px;
     text-align: center;
 }
 
 .hero-content h1 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     margin-bottom: 1rem;
 }
 
 .hero-content p {
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 2vw, 1.3rem);
     margin-bottom: 2rem;
     opacity: 0.95;
 }
@@ -283,7 +297,7 @@ body {
 
 .features h2 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
     margin-bottom: 0.8rem;
     color: var(--primary-color);
 }
@@ -449,7 +463,7 @@ body {
 
 .about h2 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
     margin-bottom: 2rem;
     color: var(--primary-color);
 }
@@ -470,7 +484,7 @@ body {
 
 .contact h2 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
     margin-bottom: 3rem;
     color: var(--primary-color);
 }
@@ -514,12 +528,12 @@ body {
 }
 
 .page-header h1 {
-    font-size: 2.8rem;
+    font-size: clamp(1.8rem, 4.5vw, 2.8rem);
     margin-bottom: 1rem;
 }
 
 .page-header p {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     opacity: 0.95;
 }
 
@@ -575,7 +589,7 @@ body {
 
 .process-section h2 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
     margin-bottom: 3rem;
     color: var(--primary-color);
 }
@@ -737,7 +751,7 @@ body {
 
 .work-process h2 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
     margin-bottom: 0.8rem;
     color: var(--primary-color);
 }
@@ -853,7 +867,7 @@ body {
 
 .departments h2 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
     margin-bottom: 0.8rem;
     color: var(--primary-color);
 }
@@ -933,7 +947,7 @@ body {
 
 .team h2 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
     margin-bottom: 3rem;
     color: var(--primary-color);
 }
@@ -1056,7 +1070,7 @@ body {
 
 .court-intro h2 {
     color: var(--primary-color);
-    font-size: 2rem;
+    font-size: clamp(1.4rem, 3vw, 2rem);
     margin-bottom: 1.5rem;
 }
 
@@ -1069,8 +1083,23 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .nav-container {
+        justify-content: center;
+    }
+
+    .logo {
+        width: 100%;
+        justify-content: center;
+    }
+
     .nav-menu {
-        gap: 1rem;
+        width: 100%;
+        justify-content: center;
+        gap: 0.8rem 1.2rem;
         font-size: 0.9rem;
     }
 
@@ -1096,7 +1125,11 @@ body {
 
     .features-grid,
     .services-grid,
-    .process-steps {
+    .process-steps,
+    .mv-grid,
+    .wp-grid,
+    .dept-grid,
+    .contact-info {
         grid-template-columns: 1fr;
     }
 
@@ -1110,14 +1143,65 @@ body {
         max-width: 340px;
     }
 
+    .team-slide {
+        padding: 1.5rem;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .team-slide .team-photo {
+        width: 140px;
+        height: 140px;
+    }
+
+    .slider-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+    }
+
+    .prev-btn { left: 4px; }
+    .next-btn { right: 4px; }
+
+    .marquee-track span,
+    .ticker-items span {
+        font-size: 0.9rem;
+        padding: 0 1.25rem;
+    }
+
+    .ticker-label {
+        padding: 0.7rem 0.9rem;
+        font-size: 0.85rem;
+    }
+
+    .page-header,
+    .court-intro,
+    .services-section,
+    .process-section,
+    .contact,
+    .features,
+    .mission-vision,
+    .about,
+    .departments,
+    .team,
+    .work-process {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
     .contact-info {
         grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 480px) {
+    .nav-container {
+        padding: 0 14px;
+    }
+
     .nav-menu {
         flex-direction: column;
+        align-items: center;
         gap: 0.5rem;
     }
 
@@ -1138,6 +1222,29 @@ body {
     .contact h2,
     .process-section h2 {
         font-size: 1.5rem;
+    }
+
+    .marquee-wrap,
+    .ticker-wrap {
+        font-size: 0.85rem;
+    }
+
+    .service-card,
+    .feature-card,
+    .mv-card,
+    .dept-card,
+    .step,
+    .wp-section,
+    .team-card {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .team-slide-info,
+    .about-text,
+    .wp-info,
+    .dept-card ul {
+        min-width: 0;
     }
 }
 
