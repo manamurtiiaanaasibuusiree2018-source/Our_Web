@@ -51,6 +51,132 @@ img {
     color: var(--primary-color);
 }
 
+/* Departments Section */
+.departments-section {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
+}
+
+.departments-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.departments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .departments-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.department-card {
+    border-radius: 12px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.department-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, currentColor, transparent);
+    opacity: 0.6;
+}
+
+.department-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.dept-color-1 {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+}
+
+.dept-color-2 {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: white;
+}
+
+.dept-color-3 {
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+    color: white;
+}
+
+.dept-color-4 {
+    background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+    color: white;
+}
+
+.dept-color-5 {
+    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+    color: white;
+}
+
+.dept-color-6 {
+    background: linear-gradient(135deg, #1abc9c 0%, #16a085 100%);
+    color: white;
+}
+
+.dept-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.department-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.department-card p {
+    line-height: 1.8;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+}
+
+.dept-link {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.dept-link:hover {
+    border-color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
 .mv-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -246,6 +372,49 @@ img {
 .nav-menu a:hover,
 .nav-menu a.active {
     color: var(--accent-color);
+}
+
+/* Navbar social link (Telegram) */
+.nav-social {
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.telegram-link {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.08);
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.telegram-link:hover {
+    color: var(--accent-color);
+    background: rgba(255,255,255,0.03);
+}
+
+.googlemeet-link {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.08);
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.googlemeet-link:hover {
+    color: #4285F4;
+    background: rgba(66, 133, 244, 0.1);
+    border-color: rgba(66, 133, 244, 0.3);
 }
 
 /* Hero Section */
@@ -1332,4 +1501,291 @@ img {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+/* Accordion for Features Section */
+.features-accordion {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    background: white;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.accordion-item:hover {
+    border-color: var(--secondary-color);
+    box-shadow: 0 4px 15px rgba(30, 58, 95, 0.1);
+}
+
+.accordion-item.active {
+    border-color: var(--accent-color);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.2);
+}
+
+.accordion-header {
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    padding: 18px 25px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+
+.accordion-header:hover {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+}
+
+.accordion-item.active .accordion-header {
+    background: linear-gradient(135deg, var(--accent-color), #e5c550);
+    color: var(--primary-color);
+}
+
+.accordion-header .icon {
+    font-size: 1.6rem;
+    flex-shrink: 0;
+}
+
+.accordion-header .title {
+    flex: 1;
+}
+
+.accordion-header .arrow {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background: var(--light-bg);
+}
+
+.accordion-content p {
+    padding: 20px 25px;
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+/* Mission-Vision Accordion */
+.mv-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mission-vision .accordion-item {
+    margin-bottom: 20px;
+}
+
+/* Services Section Accordion */
+.services-section .services-accordion {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Two Column Layout - Walitti Bukkee */
+.services-two-column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .services-two-column {
+        grid-template-columns: 1fr;
+    }
+}
+
+.services-section .accordion-item {
+    margin-bottom: 0;
+}
+
+/* Service Item Colors - Haluu Gara Garaa */
+.service-item-1 .accordion-header {
+    background: linear-gradient(135deg, #C62828, #E53935) !important;
+}
+.service-item-1.active .accordion-header {
+    background: linear-gradient(135deg, #EF5350, #E57373) !important;
+}
+.service-item-1 .accordion-content {
+    background: #FFEBEE;
+}
+
+.service-item-2 .accordion-header {
+    background: linear-gradient(135deg, #1565C0, #1976D2) !important;
+}
+.service-item-2.active .accordion-header {
+    background: linear-gradient(135deg, #42A5F5, #64B5F6) !important;
+}
+.service-item-2 .accordion-content {
+    background: #E3F2FD;
+}
+
+.service-item-3 .accordion-header {
+    background: linear-gradient(135deg, #2E7D32, #388E3C) !important;
+}
+.service-item-3.active .accordion-header {
+    background: linear-gradient(135deg, #66BB6A, #81C784) !important;
+}
+.service-item-3 .accordion-content {
+    background: #E8F5E9;
+}
+
+.service-item-4 .accordion-header {
+    background: linear-gradient(135deg, #F57C00, #FB8C00) !important;
+}
+.service-item-4.active .accordion-header {
+    background: linear-gradient(135deg, #FFA726, #FFB74D) !important;
+}
+.service-item-4 .accordion-content {
+    background: #FFF3E0;
+}
+
+.service-item-5 .accordion-header {
+    background: linear-gradient(135deg, #6A1B9A, #7B1FA2) !important;
+}
+.service-item-5.active .accordion-header {
+    background: linear-gradient(135deg, #AB47BC, #BA68C8) !important;
+}
+.service-item-5 .accordion-content {
+    background: #F3E5F5;
+}
+
+.service-item-6 .accordion-header {
+    background: linear-gradient(135deg, #00838F, #0097A7) !important;
+}
+.service-item-6.active .accordion-header {
+    background: linear-gradient(135deg, #26C6DA, #4DD0E1) !important;
+}
+.service-item-6 .accordion-content {
+    background: #E0F7FA;
+}
+
+.service-item-7 .accordion-header {
+    background: linear-gradient(135deg, #D84315, #E64A19) !important;
+}
+.service-item-7.active .accordion-header {
+    background: linear-gradient(135deg, #FF7043, #FF8A65) !important;
+}
+.service-item-7 .accordion-content {
+    background: #FBE9E7;
+}
+
+.service-item-8 .accordion-header {
+    background: linear-gradient(135deg, #AD1457, #C2185B) !important;
+}
+.service-item-8.active .accordion-header {
+    background: linear-gradient(135deg, #EC407A, #F06292) !important;
+}
+.service-item-8 .accordion-content {
+    background: #FCE4EC;
+}
+
+/* Process Section Accordion */
+.process-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.process-section .accordion-item {
+    margin-bottom: 15px;
+}
+
+/* Process Step Colors - Gara Garaa */
+.process-step-1 .accordion-header {
+    background: linear-gradient(135deg, #2E7D32, #4CAF50) !important;
+}
+
+.process-step-1.active .accordion-header {
+    background: linear-gradient(135deg, #66BB6A, #81C784) !important;
+}
+
+.process-step-1 .accordion-content {
+    background: #E8F5E9;
+}
+
+.process-step-2 .accordion-header {
+    background: linear-gradient(135deg, #1565C0, #1976D2) !important;
+}
+
+.process-step-2.active .accordion-header {
+    background: linear-gradient(135deg, #42A5F5, #64B5F6) !important;
+}
+
+.process-step-2 .accordion-content {
+    background: #E3F2FD;
+}
+
+.process-step-3 .accordion-header {
+    background: linear-gradient(135deg, #E65100, #F57C00) !important;
+}
+
+.process-step-3.active .accordion-header {
+    background: linear-gradient(135deg, #FF9800, #FFB74D) !important;
+}
+
+.process-step-3 .accordion-content {
+    background: #FFF3E0;
+}
+
+.process-step-4 .accordion-header {
+    background: linear-gradient(135deg, #6A1B9A, #8E24AA) !important;
+}
+
+.process-step-4.active .accordion-header {
+    background: linear-gradient(135deg, #AB47BC, #BA68C8) !important;
+}
+
+.process-step-4 .accordion-content {
+    background: #F3E5F5;
+}
+
+/* Court Intro Sliding Animation */
+.court-intro-slider {
+    overflow: hidden;
+    padding: 20px 0;
+    background: linear-gradient(135deg, #f0f4f8, #e1e8ed);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(30, 58, 95, 0.1);
+}
+
+.court-intro-track {
+    display: flex;
+    width: max-content;
+    animation: slideCourtIntro 25s linear infinite;
+}
+
+.court-intro-track p {
+    margin: 0;
+    padding: 0 30px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    white-space: nowrap;
+}
+
+@keyframes slideCourtIntro {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Hover to pause */
+.court-intro-slider:hover .court-intro-track {
+    animation-play-state: paused;
 }

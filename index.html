@@ -13,7 +13,11 @@
         <div class="nav-container">
             <div class="logo">
                 <img src="logo mmass.jpg" alt="Mana Murtii Aanaa Sibuu Siree Logo" class="logo-img">
-                <h1>Mana Murtii Aanaa Sibuu Siree</h1>
+                    <h1>Mana Murtii Aanaa Sibuu Siree <span class="eng-name">(Sibu Sire Woreda Court)</span></h1>
+            </div>
+            <div class="nav-social">
+                <a href="https://t.me/mana murtii Aanaa sibuu siree (mana murtii aanaa sibuu siree)" target="_blank" class="telegram-link" aria-label="Telegram Mana Murtii Aanaa Sibuu Siree">📨 Telegram</a>
+                <a href="https://meet.google.com/vcv-gcrh-weh?hl=en" target="_blank" class="googlemeet-link" aria-label="Google Meet Mana Murtii Aanaa Sibuu Siree">📹 Google Meet (M/M/A/S/Siree)</a>
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html" class="active">Fuula Jalqabaa</a></li>
@@ -91,17 +95,34 @@
     <section class="mission-vision">
         <div class="container">
             <h2>Ergama & Mul'ata</h2>
-            <div class="mv-grid">
-                <div class="mv-card mission">
-                    <div class="mv-icon">🎯</div>
-                    <h3>Ergama Keenya</h3>
-                    <p>Hawaasa keenyaaf haqaa, iftoominaa fi yeroo isaa eeggate dhiyeessuu. Seera kabajuun, ogummaa olaanaa fi walqixxummaan dhimma hunda hojjechuuf kutannoo qabna.</p>
+            
+            <!-- Accordion Structure -->
+            <div class="mv-accordion">
+                
+                <!-- Ergama Keenya -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="icon">🎯</span>
+                        <span class="title">Ergama Keenya</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Hawaasa keenyaaf haqaa, iftoominaa fi yeroo isaa eeggate dhiyeessuu. Seera kabajuun, ogummaa olaanaa fi walqixxummaan dhimma hunda hojjechuuf kutannoo qabna.</p>
+                    </div>
                 </div>
-                <div class="mv-card vision">
-                    <div class="mv-icon">🌟</div>
-                    <h3>Mul'ata Keenya</h3>
-                    <p>Tajaajila mana murtii keessatti fakkeenya ta'uun beekamuu — lammiin hundi haqa argachuu danda'u. Hawaasa seeraan, kabajaan fi danda'umsaan bultu ijaaruuf carraaqna.</p>
+
+                <!-- Mul'ata Keenya -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="icon">🌟</span>
+                        <span class="title">Mul'ata Keenya</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Tajaajila mana murtii keessatti fakkeenya ta'uun beekamuu — lammiin hundi haqa argachuu danda'u. Hawaasa seeraan, kabajaan fi danda'umsaan bultu ijaaruuf carraaqna.</p>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -111,47 +132,106 @@
         <div class="container">
             <h2>Hojii Gurguddaa Mana Murtii Aanaa Sibuu Siree</h2>
             <p class="features-sub">Karaa TQO — Teeknoloojii Fayyadamuun Hojjetamu</p>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="icon">💻</div>
-                    <h3>Sirna Galmeessa Dijitaalaa</h3>
-                    <p>Dhimmoota seeraa fi ragaalee mana murtii sirna kompiyuutaraa fayyadamuun galmeessuu, kuusuu fi eeguu — galmee beekamtii qulqullina qabu mirkaneessa.</p>
+            
+            <!-- Accordion Structure -->
+            <div class="features-accordion">
+                
+                <!-- Item 1 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="icon">💻</span>
+                        <span class="title">Sirna Galmeessa Dijitaalaa</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Dhimmoota seeraa fi ragaalee mana murtii sirna kompiyuutaraa fayyadamuun galmeessuu, kuusuu fi eeguu — galmee beekamtii qulqullina qabu mirkaneessa.</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="icon">📊</div>
-                    <h3>Gabaasa Elektirooniksii</h3>
-                    <p>Gabaasaalee hojii guyyaa-guyyaa, torban-torban fi ji'a-ji'aan sirna teeknoloojii fayyadamuun qopheessuu fi hoggantoota irraan ga'umsaan dhiyeessuu.</p>
+
+                <!-- Item 2 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="icon">📊</span>
+                        <span class="title">Gabaasa Elektirooniksii</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Gabaasaalee hojii guyyaa-guyyaa, torban-torban fi ji'a-ji'aan sirna teeknoloojii fayyadamuun qopheessuu fi hoggantoota irraan ga'umsaan dhiyeessuu.</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="icon">🔍</div>
-                    <h3>Hordoffii Dhimma Seeraa</h3>
-                    <p>Dhimmoota seeraa sadarkaa adda addaa irra jiran sirna dijitaalaa fayyadamuun hordofuu — yeroo dhimmichi murtaa'u eeggatee galmeeffamuu mirkaneessa.</p>
+
+                <!-- Item 3 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="icon">🔍</span>
+                        <span class="title">Hordoffii Dhimma Seeraa</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Dhimmoota seeraa sadarkaa adda addaa irra jiran sirna dijitaalaa fayyadamuun hordofuu — yeroo dhimmichi murtaa'u eeggatee galmeeffamuu mirkaneessa.</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="icon">🔒</div>
-                    <h3>Eegumsa Odeeffannoo</h3>
-                    <p>Odeeffannoo dhimmootaa fi ragaalee iccitii ta'an sirna nageenyaa teeknoloojii fayyadamuun eeguu fi namootni hayyama hin qabne akka hin arganne to'achuu.</p>
+
+                <!-- Item 4 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="icon">🔒</span>
+                        <span class="title">Eegumsa Odeeffannoo</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Odeeffannoo dhimmootaa fi ragaalee iccitii ta'an sirna nageenyaa teeknoloojii fayyadamuun eeguu fi namootni hayyama hin qabne akka hin arganne to'achuu.</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="icon">📅</div>
-                    <h3>Karoora fi Qindaa'ina Yaa'ii</h3>
-                    <p>Yaa'iilee mana murtii karaa sirna elektirooniksii qindaa'e — guyyaa, sa'aatii fi bakka qindaa'e eeruun beeksifannoo kennuu fi wal-quunnamtii hawaasaa fooyyessuu.</p>
+
+                <!-- Item 5 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="icon">📅</span>
+                        <span class="title">Karoora fi Qindaa'ina Yaa'ii</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Yaa'iilee mana murtii karaa sirna elektirooniksii qindaa'e — guyyaa, sa'aatii fi bakka qindaa'e eeruun beeksifannoo kennuu fi wal-quunnamtii hawaasaa fooyyessuu.</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="icon">🖨️</div>
-                    <h3>Maxxansaa fi Raabsaa Ragaa</h3>
-                    <p>Murtii fi ragaalee seeraa qulqullina olaanaa qabu sirna maxxansaa dijitaalaa fayyadamuun qopheessuu fi garee dhimmi ilaalu hundaaf yeroo isaa eeggatee raabsuu.</p>
+
+                <!-- Item 6 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="icon">🖨️</span>
+                        <span class="title">Maxxansaa fi Raabsaa Ragaa</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Murtii fi ragaalee seeraa qulqullina olaanaa qabu sirna maxxansaa dijitaalaa fayyadamuun qopheessuu fi garee dhimmi ilaalu hundaaf yeroo isaa eeggatee raabsuu.</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="icon">📡</div>
-                    <h3>Wal-quunnamtii Elektirooniksii</h3>
-                    <p>Mana murtii olaanaa, manneen murtii biroo fi dhaabbilee mootummaa waliin odeeffannoo fi gabaasa yeroo isaa eegatee erguuf sirna wal-quunnamtii dijitaalaa fayyadamuu.</p>
+
+                <!-- Item 7 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="icon">📡</span>
+                        <span class="title">Wal-quunnamtii Elektirooniksii</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Mana murtii olaanaa, manneen murtii biroo fi dhaabbilee mootummaa waliin odeeffannoo fi gabaasa yeroo isaa eegatee erguuf sirna wal-quunnamtii dijitaalaa fayyadamuu.</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="icon">🎓</div>
-                    <h3>Leenjii Teeknoloojii Hojjettoota</h3>
-                    <p>Hojjettoota mana murtii sirna teeknoloojii haaraa fayyadamuu irratti leenjisuu fi deggeruu — dandeetii ogummaa cimsuu fi hojii qulqullinaan raawwachuu mirkaneessuu.</p>
+
+                <!-- Item 8 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="icon">🎓</span>
+                        <span class="title">Leenjii Teeknoloojii Hojjettoota</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Hojjettoota mana murtii sirna teeknoloojii haaraa fayyadamuu irratti leenjisuu fi deggeruu — dandeetii ogummaa cimsuu fi hojii qulqullinaan raawwachuu mirkaneessuu.</p>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -459,55 +539,117 @@
         <!-- Court Introduction -->
         <div class="court-intro">
             <div class="container">
-                <h2>Waa'ee Mana Murtii Aanaa Sibuu Siree</h2>
-                <p>Mana Murtii Aanaa Sibuu Siree dhaabbata murtii olaanaa yommuu ta'u, haqa kabachiisuuf fi seera hojiirra oolchuuf kutannoon hojjeta. Manni murtii keenya deemsa seeraa daddafaa, haqaa fi iftoominaan raawwachuuf cichoominaan hojjeta. Abbootii seeraa muuxannoo qaban fi hojjettoota ogummaa qaban waliin, dhimma hundi xiyyeeffannoo fi beekumsa isaa argata.</p>
+                <h2>Baga Nagaan Dhuftaan Waa'ee Mana Murtii Aanaa Sibuu Siree</h2>
+                <div class="court-intro-slider">
+                    <div class="court-intro-track">
+                        <p>Mana Murtii Aanaa Sibuu Siree dhaabbata murtii olaanaa yommuu ta'u, haqa kabachiisuuf fi seera hojiirra oolchuuf kutannoon hojjeta. Manni murtii keenya deemsa seeraa daddafaa, haqaa fi iftoominaan raawwachuuf cichoominaan hojjeta. Abbootii seeraa muuxannoo qaban fi hojjettoota ogummaa qaban waliin, dhimma hundi xiyyeeffannoo fi beekumsa isaa argata.</p>
+                        <p>Mana Murtii Aanaa Sibuu Siree dhaabbata murtii olaanaa yommuu ta'u, haqa kabachiisuuf fi seera hojiirra oolchuuf kutannoon hojjeta. Manni murtii keenya deemsa seeraa daddafaa, haqaa fi iftoominaan raawwachuuf cichoominaan hojjeta. Abbootii seeraa muuxannoo qaban fi hojjettoota ogummaa qaban waliin, dhimma hundi xiyyeeffannoo fi beekumsa isaa argata.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- Services Grid -->
+        <!-- Services Accordion -->
         <div class="services-section">
             <div class="container">
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">⚖️</div>
-                        <h3>Bulchiinsa Dhimmootaa</h3>
-                        <p>Dhimmoota seeraa hunda ogummaan to'achuu, galmeessuu fi hordofuu — dokumentii guutuu fi odeeffannoo tarree dhimmaa irratti yeroo isaa eegatee dhiyeessuu.</p>
+                <div class="services-accordion services-two-column">
+                    
+                    <!-- Service 1 -->
+                    <div class="accordion-item service-item-1">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            <span class="icon">⚖️</span>
+                            <span class="title">Bulchiinsa Dhimmootaa</span>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Dhimmoota seeraa hunda ogummaan to'achuu, galmeessuu fi hordofuu — dokumentii guutuu fi odeeffannoo tarree dhimmaa irratti yeroo isaa eegatee dhiyeessuu.</p>
+                        </div>
                     </div>
-                    <div class="service-card">
-                        <div class="service-icon">📑</div>
-                        <h3>Qophii Dokumentii Seeraa</h3>
-                        <p>Dokumentoota seeraa akka himata, kadhannaa fi ibsa ragaa qopheessuu — dokumentiin hundi safartuu fi gaaffii seeraa guutuu mirkaneessa.</p>
+
+                    <!-- Service 2 -->
+                    <div class="accordion-item service-item-2">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            <span class="icon">📑</span>
+                            <span class="title">Qophii Dokumentii Seeraa</span>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Dokumentoota seeraa akka himata, kadhannaa fi ibsa ragaa qopheessuu — dokumentiin hundi safartuu fi gaaffii seeraa guutuu mirkaneessa.</p>
+                        </div>
                     </div>
-                    <div class="service-card">
-                        <div class="service-icon">🔍</div>
-                        <h3>Qorannoo Seeraa</h3>
-                        <p>Seera, murtii darbee fi dambii irratti qorannoo fi xiinxala gadi fageenyaa — dhimma keessan deeggaru fi murtii ragaa irratti hundaa'e kennuuf.</p>
+
+                    <!-- Service 3 -->
+                    <div class="accordion-item service-item-3">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            <span class="icon">🔍</span>
+                            <span class="title">Qorannoo Seeraa</span>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Seera, murtii darbee fi dambii irratti qorannoo fi xiinxala gadi fageenyaa — dhimma keessan deeggaru fi murtii ragaa irratti hundaa'e kennuuf.</p>
+                        </div>
                     </div>
-                    <div class="service-card">
-                        <div class="service-icon">📞</div>
-                        <h3>Maamiltoota Mariisiisuu</h3>
-                        <p>Ogeeyyii seeraa muuxannoo qaban waliin mari'achuun dhimma keessan irratti gorsa olaanaa argachuu — tarsiimoo sirrii filatanii hojjechuu.</p>
+
+                    <!-- Service 4 -->
+                    <div class="accordion-item service-item-4">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            <span class="icon">📞</span>
+                            <span class="title">Maamiltoota Mariisiisuu</span>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Ogeeyyii seeraa muuxannoo qaban waliin mari'achuun dhimma keessan irratti gorsa olaanaa argachuu — tarsiimoo sirrii filatanii hojjechuu.</p>
+                        </div>
                     </div>
-                    <div class="service-card">
-                        <div class="service-icon">⏱️</div>
-                        <h3>Karoora Yaa'ii Mana Murtii</h3>
-                        <p>Yaa'iilee mana murtii, dhaggeeffannaa fi waltajjii seeraa yeroo isaa eegatee qindeessuu — beeksifannoo guyyaa fi yeroo isaa dursee kennuu mirkaneessuu.</p>
+
+                    <!-- Service 5 -->
+                    <div class="accordion-item service-item-5">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            <span class="icon">⏱️</span>
+                            <span class="title">Karoora Yaa'ii Mana Murtii</span>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Yaa'iilee mana murtii, dhaggeeffannaa fi waltajjii seeraa yeroo isaa eegatee qindeessuu — beeksifannoo guyyaa fi yeroo isaa dursee kennuu mirkaneessuu.</p>
+                        </div>
                     </div>
-                    <div class="service-card">
-                        <div class="service-icon">📊</div>
-                        <h3>Bulchiinsa Ragaa</h3>
-                        <p>Ragaalee fi meeshaalee dhimma seeraa nageenyaan qindeessuu fi eeguu — dokumentii sirrii fi sirna eeggannoo ragaa hojiirra oolchuun.</p>
+
+                    <!-- Service 6 -->
+                    <div class="accordion-item service-item-6">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            <span class="icon">📊</span>
+                            <span class="title">Bulchiinsa Ragaa</span>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Ragaalee fi meeshaalee dhimma seeraa nageenyaan qindeessuu fi eeguu — dokumentii sirrii fi sirna eeggannoo ragaa hojiirra oolchuun.</p>
+                        </div>
                     </div>
-                    <div class="service-card">
-                        <div class="service-icon">🏛️</div>
-                        <h3>Bakka Bu'uumsa Mana Murtii</h3>
-                        <p>Deemsa mana murtii, marii afaanii fi dhaggeeffannaa keessatti bakka bu'uumsa ogummaa qabu — mirga fi faayidaa keessan kabachiisuuf falmuun.</p>
+
+                    <!-- Service 7 -->
+                    <div class="accordion-item service-item-7">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            <span class="icon">🏛️</span>
+                            <span class="title">Bakka Bu'uumsa Mana Murtii</span>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Deemsa mana murtii, marii afaanii fi dhaggeeffannaa keessatti bakka bu'uumsa ogummaa qabu — mirga fi faayidaa keessan kabachiisuuf falmuun.</p>
+                        </div>
                     </div>
-                    <div class="service-card">
-                        <div class="service-icon">🤝</div>
-                        <h3>Araaraa fi Marii Nagaa</h3>
-                        <p>Tajaajila araaraa ogummaa qabu — waldhabbii karaa nagaatiin xumuruuf, faayidaa keessan eegaa furmaata gaarii barbaaduu.</p>
+
+                    <!-- Service 8 -->
+                    <div class="accordion-item service-item-8">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            <span class="icon">🤝</span>
+                            <span class="title">Araaraa fi Marii Nagaa</span>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Tajaajila araaraa ogummaa qabu — waldhabbii karaa nagaatiin xumuruuf, faayidaa keessan eegaa furmaata gaarii barbaaduu.</p>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -516,27 +658,58 @@
         <div class="process-section">
             <div class="container">
                 <h2>Tartiiba Deemsa Keenya</h2>
-                <div class="process-steps">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <h4>Mari'annoo Jalqabaa</h4>
-                        <p>Garee seeraa keenya waliin dhimma keessan mari'achuu</p>
+                
+                <!-- Accordion Structure -->
+                <div class="process-accordion">
+                    
+                    <!-- Step 1 -->
+                    <div class="accordion-item process-step-1">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            <span class="icon">1️⃣</span>
+                            <span class="title">Mari'annoo Jalqabaa</span>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Garee seeraa keenya waliin dhimma keessan mari'achuu</p>
+                        </div>
                     </div>
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <h4>Xiinxala Dhimmaa</h4>
-                        <p>Dhimma seeraa keessan sirriitti ilaaluu fi xiinxaluu</p>
+
+                    <!-- Step 2 -->
+                    <div class="accordion-item process-step-2">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            <span class="icon">2️⃣</span>
+                            <span class="title">Xiinxala Dhimmaa</span>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Dhimma seeraa keessan sirriitti ilaaluu fi xiinxaluu</p>
+                        </div>
                     </div>
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <h4>Tarsiimoo Baasuu</h4>
-                        <p>Dhimma keessaniif tarsiimoo seeraa addaa qopheessuu</p>
+
+                    <!-- Step 3 -->
+                    <div class="accordion-item process-step-3">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            <span class="icon">3️⃣</span>
+                            <span class="title">Tarsiimoo Baasuu</span>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Dhimma keessaniif tarsiimoo seeraa addaa qopheessuu</p>
+                        </div>
                     </div>
-                    <div class="step">
-                        <div class="step-number">4</div>
-                        <h4>Hojiirra Oolchuu fi Gabaasuu</h4>
-                        <p>Tarsiimoo hojiirra oolchuun odeeffannoo tarree dhimmaa yeroo isaa kennuu</p>
+
+                    <!-- Step 4 -->
+                    <div class="accordion-item process-step-4">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            <span class="icon">4️⃣</span>
+                            <span class="title">Hojiirra Oolchuu fi Gabaasuu</span>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Tarsiimoo hojiirra oolchuun odeeffannoo tarree dhimmaa yeroo isaa kennuu</p>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -565,7 +738,15 @@
                     <p><a href="mailto:manamurtiiaanaasibuusiree2018@gmail.com">manamurtiiaanaasibuusiree2018@gmail.com</a></p>
                 </div>
                 <div class="info-item">
-                    <h4>💻 GitHub</h4>
+                    <h4>📹 Google Meet</h4>
+                    <p><a href="https://meet.google.com/vcv-gcrh-weh?hl=en" target="_blank">vcv-gcrh-weh (M/M/A/S/Siree)</a></p>
+                </div>
+                <div class="info-item">
+                    <h4>� Telegram</h4>
+                    <p><a href="https://t.me/SibuSireWoredaCourt" target="_blank">Sibu Sire Woreda Court</a></p>
+                </div>
+                <div class="info-item">
+                    <h4>�💻 GitHub</h4>
                     <p><a href="https://github.com/manamurtiiaanaasibuusiree2018-source/M.M.A.S-Siree.git" target="_blank">M.M.A.S-Siree — Source Code</a></p>
                 </div>
             </div>
@@ -581,6 +762,25 @@
     </footer>
     <!-- Scroll Animation Script -->
     <script>
+        // Accordion toggle function
+        function toggleAccordion(button) {
+            const item = button.parentElement;
+            const content = button.nextElementSibling;
+            const arrow = button.querySelector('.arrow');
+            
+            // Toggle active class
+            item.classList.toggle('active');
+            
+            // Rotate arrow
+            if (item.classList.contains('active')) {
+                arrow.style.transform = 'rotate(180deg)';
+                content.style.maxHeight = content.scrollHeight + 'px';
+            } else {
+                arrow.style.transform = 'rotate(0deg)';
+                content.style.maxHeight = '0';
+            }
+        }
+
         // Tab switching function
         function openTab(evt, tabName) {
             // Hide all tab contents
