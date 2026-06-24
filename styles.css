@@ -17,6 +17,11 @@ html {
     --light-bg: #f5f7fa;
     --white: #ffffff;
     --border-color: #ddd;
+    --hrm-link-color: #1f85f6;
+    --hrm-link-bg: rgba(31, 133, 246, 0.08);
+    --btn-secondary-bg: #fafafa;
+    --btn-secondary-border: #1e3a5f;
+    --btn-secondary-color: #1e3a5f;
 }
 
 body {
@@ -36,6 +41,41 @@ img {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+.nav-social a.hrm-link,
+.btn-secondary {
+    display: inline-block;
+    margin-left: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-social a.hrm-link {
+    background-color: var(--hrm-link-bg);
+    color: var(--hrm-link-color);
+    border: 1px solid rgba(31, 133, 246, 0.25);
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.btn-secondary {
+    background-color: var(--btn-secondary-bg);
+    color: var(--btn-secondary-color);
+    border: 1px solid var(--btn-secondary-border);
+}
+
+.btn-secondary:hover,
+.nav-social a.hrm-link:hover {
+    opacity: 0.9;
 }
 
 /* Mission & Vision Section */
